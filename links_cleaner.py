@@ -13,7 +13,7 @@ while line:
 
 print(f"Total link(s):{len(all_words)}")
 
-# Преобразование оригинальных ссылок в прямые ссылки на файлы со страницы
+# Transformation initial links to links with absolute path to images
 links = []
 
 for i in trange(len(all_words)):

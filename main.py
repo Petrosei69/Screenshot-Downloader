@@ -6,7 +6,7 @@ from urllib.parse import urljoin, urlparse
 from pathlib import Path
 from tqdm import trange
 
-# Загрузка файла с первоначальными ссылками для того чтобы их нарезать для имен скриншотов
+# Import file with initial links for exctract names for files
 file = open('links.txt', "r")
 all_words = []
 line = file.readline().split()
@@ -17,7 +17,7 @@ while line:
 #print(all_words)
 #print(len(all_words))
 
-# Загрузка файла с чистыми ссылками на файлы
+# Import file with clear links with absolute path to image
 file = open('clearlinks.txt', "r")
 links = []
 line = file.readline().split()
@@ -28,7 +28,7 @@ while line:
 #print(links)
 #print(len(links))
 
-# Создание папки для сохранения скриншотов
+# Create folder for images
 try:
     os.mkdir(os.path.join(os.getcwd(), 'screenshots'))
 except:
@@ -36,7 +36,7 @@ except:
 os.chdir(os.path.join(os.getcwd(), 'screenshots'))
 
 
-# Скачивание файлов
+# Downloading files from urls
 for i in trange(len(links)):
 
     filename = os.path.join(all_words[i].split("/")[-1])
