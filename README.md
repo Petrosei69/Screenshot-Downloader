@@ -24,3 +24,8 @@ python downloader.py -port 8090
 ```
 Make sure that in folder with script added file with links named "links.txt" 
 You can rename file you need to use to "links.txt"
+
+Result of programm will create:
+ 1. folder "screenshots" with images
+ 2. "exceptions.txt"  with empty links
+ 3. "clearlinks.txt" and "correctlinks.txt" files for program operation and debugging
