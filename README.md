@@ -3,14 +3,24 @@ Screenshot downloader from url
 
 Use https://skr.sh/ as resourse of images
 
+script created on 3.10.6 python version
 
+download python from link:
+https://www.python.org/downloads/release/python-3106/
 
-To use script add file .txt with links 
+To use script you must put "links.txt" in folder with script
+ 
 ```shell
-file = open('links.txt', "r")
+pip install requests
+pip install tqdm
+pip install bs4
+pip install difflib
 ```
-p.s Downloading of large images often interrupted, so may better divide huge file with links to several files smaller (optimal = 100-150)
 
+To launch script write on console
 
-At first you need to start links_cleaner.py to convert initial links to directional links to .jpg files.
-That script create file with directional links and this file uses in main.py to download images.
+```shell
+python downloader.py -port 8090
+```
+Make sure that in folder with script added file with links named "links.txt" 
+You can rename file you need to use to "links.txt"
